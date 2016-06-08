@@ -14,15 +14,57 @@ body{
 		border: 1px black solid;
 		box-sizing:border-box;
 		padding:calc(50vh - 250px) 100px;
+		left: 0;
 	}
 	#page1{
-		left: 0;
 		top: 0;
 	}
 	#page2{
-		left: 0;
 		top: 100%;
 	}
+	nav{
+		position: fixed;
+		top: 100px;
+		right: 30px;
+		ul{
+			margin: 0;
+			padding: 0;
+			li{
+				cursor: pointer;
+				list-style: none;
+				text-align: right;
+				margin: 10px 0;
+				.nav-point{
+					height: 10px;
+					width: 10px;
+					margin: 5px;
+					border-radius: 50%;
+					background-color: gray;
+					display: inline-block;
+					opacity: 1;
+					transition: 1s all;
+				}
+				.active{
+					background-color: black;
+				}
+				.hover-name{
+					opacity: 0;
+					font-size: 20px;
+					margin-top: -25px;
+					transition: 1s all;
+				}
+			}
+			li:hover{
+				.nav-point{
+					opacity: 0;
+				}
+				.hover-name{
+					opacity: 1;
+				}
+			}
+		}
+	}
+	//home
 	.home{
 		font-size: 50px;
 		text-align: center;
@@ -30,6 +72,7 @@ body{
 		line-height: 50px;
 		margin-top: 225px;
 	}
+	//list
 	.content{
 		span,p,a{
 			margin:20px 0;

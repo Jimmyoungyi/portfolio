@@ -13,14 +13,15 @@
 	<div id="page1" class="page"></div>
 	<div id="page2" class="page"></div>
 	<nav>
-		<ul>
-			<li>
-				<div class="nav-point"></div>
-				<div class="hover-name">{title}</div>
-			</li>
-		</ul>
+		<ul></ul>
 	</nav>
 </body>
+<script type="text/template" id="nav-item">
+	<li>
+		<div class="nav-point"></div>
+		<div class="hover-name">{title}</div>
+	</li>
+</script>
 <script type="text/template" id="home-temp">
 	<span class="home">{title}</span>
 </script>
@@ -29,9 +30,9 @@
 		<span class="title">{title}</span><br>
 		<p class="description">Description:<br><br>{description}</p><br>
 		<span class="tech">Tech:<br> {tech}</span><br>
-		<a class="link" href="{link}">Link</a>
-		<a class="github" href="{github}">GitHub</a>
-		<a class="detail">Detail</a>
+		<a target="_blank" class="link" href="{link}">Link</a>
+		<a target="_blank" class="github" href="{github}">GitHub</a>
+		<a target="_blank" class="detail">Detail</a>
 	</div>
 	<div class="img-group">
 		<img src="{imgLink}" alt="">
