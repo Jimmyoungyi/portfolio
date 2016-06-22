@@ -26,14 +26,22 @@ $(function(){
 	//nav click
 	$("nav>ul>li>div").click(function(){
 		if(detail){
-
+			if($(this).parent().index()==0||$(this).parent().index()==currentProject){
+				goHome($(this).parent().index());
+			}else{
+				changeProjectDetail($(this).parent().index());
+			}
 		}else{
 			targetProject = $(this).parent().index();
 			changeProject(targetProject);
 		}
 	})
-	//
-
+	//sub nav click
+	$(document).on("click",".detail li",function(){
+		
+		targetDetail = $(this).index();
+		changeDetail(targetDetail);
+	})
 	//scroll page
 	$("body").mousewheel(function(event, delta) {
 		if(animate){
@@ -79,7 +87,7 @@ $(function(){
 				)
 		animate=false;
 		targetIn.css({"top":"0%","left":"100vw"});
-		targetIn.animate({left:"0%"},1000);
+		targetIn.animate({left:"0%"},800);
 		$(".active").parent().addClass("detail");
 		$(".active").removeClass("active");
 		$(".detail").find("ul .nav-point").eq(0).addClass("active");
@@ -87,7 +95,8 @@ $(function(){
 		var mainnavHeight = subnavHeight+90;
 		$(".detail").find("ul").css("height",subnavHeight+"px");
 		$("nav").css({height:mainnavHeight+"px",top:($(window).height()-mainnavHeight)/2+"px"});
-		targetOut.animate({left:"-100vw"},1000,function(){
+		$("nav>ul").css("margin-top",-30*(currentProject-1)+"px");
+		targetOut.animate({left:"-100vw"},800,function(){
 			animate=true;
 			detail=true;
 			document.location="#"+data[currentProject].title.replace(/\s+/g, '');
@@ -132,12 +141,12 @@ $(function(){
 			targetIn.css("z-index","1");
 			targetOut.css("z-index","10");
 			targetIn.css({"top":"0","left":"0"});
-			targetOut.animate({top:"-100%"},1000,function(){animate=true});
+			targetOut.animate({top:"-100%"},800,function(){animate=true});
 		}else if(newProject < currentProject){
 			targetIn.css("z-index","10");
 			targetOut.css("z-index","1");
 			targetIn.css({"top":"-100%","left":"0"});
-			targetIn.animate({top:"0%"},1000,function(){animate=true});
+			targetIn.animate({top:"0%"},800,function(){animate=true});
 		}else{
 			targetIn.css({"top":"0%","left":"0"});
 			targetOut.css("top","-100%");
@@ -146,6 +155,7 @@ $(function(){
 		currentProject = newProject;
 		defaultPage = !defaultPage;
 	}
+	//change detail page
 	function changeDetail(newDetail){
 		//nav change
 		$(".nav-point").removeClass("active");
@@ -156,16 +166,16 @@ $(function(){
 			$("#detail-"+data[currentProject].detailpage[newDetail].type+"-temp").html().replace(/{title}/g,data[currentProject].title)
 		);
 		//animate
-		if(newDetail > currentDetail){
+		if(targetDetail > currentDetail){
 			targetIn.css("z-index","1");
 			targetOut.css("z-index","10");
 			targetIn.css({"top":"0","left":"0"});
-			targetOut.animate({top:"-100%"},1000,function(){animate=true});
-		}else if(newDetail < currentDetail){
+			targetOut.animate({top:"-100%"},800,function(){animate=true});
+		}else if(targetDetail < currentDetail){
 			targetIn.css("z-index","10");
 			targetOut.css("z-index","1");
 			targetIn.css({"top":"-100%","left":"0"});
-			targetIn.animate({top:"0%"},1000,function(){animate=true});
+			targetIn.animate({top:"0%"},800,function(){animate=true});
 		}else{
 			targetIn.css({"top":"0%","left":"0"});
 			targetOut.css("top","-100%");
@@ -173,7 +183,87 @@ $(function(){
 		//update data
 		currentDetail = newDetail;
 		defaultPage = !defaultPage;
-		
+	}
+	function changeProjectDetail(newProject){
+		currentDetail=0;
+		//nav
+		var subnavHeight = data[newProject].detailpage.length*30+10;
+		var mainnavHeight = subnavHeight+90;
+		$("nav").css({height:mainnavHeight+"px",top:($(window).height()-mainnavHeight)/2+"px"});
+		$("nav>ul").css("margin-top",-30*(newProject-1)+"px");
+		$(".detail ul").css("height","0px");
+		$(".active").removeClass("active");
+		$(".detail").removeClass("detail");
+		$("nav>ul>li").eq(newProject).addClass("detail");
+		$(".detail ul li").eq(0).find(".nav-point").addClass("active");
+		$(".detail").find("ul").css("height",subnavHeight+"px");
+		//content
+		getContainer();
+		targetIn.html(
+			$("#list-temp").html().replace(/{title}/g,data[newProject].title)
+									.replace(/{description}/,data[newProject].description)
+									.replace(/{tech}/,data[newProject].tech)
+									.replace(/{link}/,data[newProject].link)
+									.replace(/{github}/,data[newProject].github)
+									.replace(/{imgLink}/,data[newProject].imgLink)
+		)
+		//animate
+		animate=false;
+		if(newProject>currentProject){
+			targetOut.animate({top:"-100%"},400,function(){
+				targetIn.css({top:"100%",left:"0%"});
+				targetIn.animate({top:"0%"},400,function(){
+					animate=true;
+				});
+			});	
+		}else{
+			targetOut.animate({top:"100%"},400,function(){
+				targetIn.css({top:"-100%",left:"0%"});
+				targetIn.animate({top:"0%"},400,function(){
+					animate=true;
+				});
+			});
+		}
+		document.location="#"+data[newProject].title.replace(/\s+/g, '');
+		currentProject = newProject;
+		defaultPage = !defaultPage;	
+	}
+	function goHome(newProject){
+		//nav 
+		var subnavHeight = 0;
+		var mainnavHeight = totalProject*30+10;
+		$("nav").css({height:mainnavHeight+"px",top:($(window).height()-mainnavHeight)/2+"px"});
+		$("nav>ul").css("margin-top","0px");
+		$(".detail").find("ul").css("height",subnavHeight+"px");
+		$(".active").removeClass("active");
+		$(".detail").removeClass("detail");
+		//content
+		getContainer();
+		if(newProject == 0){
+			targetIn.html($("#home-temp").html().replace(/{title}/,data[0].title));
+			currentProject = 0;
+		}else{
+			targetIn.html(
+				$("#list-temp").html().replace(/{title}/g,data[newProject].title)
+										.replace(/{description}/,data[newProject].description)
+										.replace(/{tech}/,data[newProject].tech)
+										.replace(/{link}/,data[newProject].link)
+										.replace(/{github}/,data[newProject].github)
+										.replace(/{imgLink}/,data[newProject].imgLink)
+			)
+		}
+		$("nav>ul>li").eq(newProject).find(".nav-point").addClass("active");
+		//animate
+		animate=false;
+		targetIn.css("z-index","10");
+		targetOut.css("z-index","1");
+		targetIn.css({"top":"0%","left":"-100vw"});
+		targetIn.animate({left:"0%"},800,function(){
+			animate=true;
+			detail=false;
+			document.location="#";
+		});
+		defaultPage = !defaultPage;
 	}
 })
 	
