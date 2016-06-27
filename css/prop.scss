@@ -1,4 +1,33 @@
-span,a{
+//font
+.text-header{
+	font-size: 32px;
+	margin-bottom: 11px;
+}
+.text-subheader{
+	font-size: 28px;
+	margin-bottom: 10px;
+}
+.text-title{
+	font-size: 24px;
+	margin-bottom: 8px;
+}
+.text-subtitle{
+	font-size: 20px;
+	margin-bottom: 7px;
+}
+.text-content{
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+.text-nav{
+	font-size: 20px;
+	line-height: 20px;
+}
+//
+span{
+	display: inline-block;
+}
+a{
 	display: inline-block;
 	cursor:pointer;
 }
@@ -9,22 +38,6 @@ body{
 	height:100vh;
 	width:100vw;
 	overflow:hidden;
-	.page{
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		border: 1px black solid;
-		box-sizing:border-box;
-		padding:calc(50vh - 250px) 100px;
-		left: 0;
-		background-color:white;
-	}
-	#page1{
-		top: 0;
-	}
-	#page2{
-		top: 100%;
-	}
 	nav{
 		position: fixed;
 		top: 0px;
@@ -60,8 +73,6 @@ body{
 				}
 				.hover-name{
 					opacity: 0;
-					font-size: 20px;
-					line-height: 20px;
 					transition: 1s all;
 				}
 				ul{
@@ -95,38 +106,104 @@ body{
 			}
 		}
 	}
-	//home
-	.home{
-		font-size: 50px;
-		text-align: center;
-		display: block;
-		line-height: 50px;
-		margin-top: 225px;
+	#page1{
+		top: 0;
 	}
-	//list
-	.content{
-		span,p,a{
-			margin:20px 0;
-			margin-right: 20px;
-		}
-		float: left;
-		width: 60%;
-		height: 500px;
-		.title{
-			font-size: 30px;
-		}
-		.description{}
-		.tech{}
-		.link{}
-		.github{}
+	#page2{
+		top: 100%;
 	}
-	.img-group{
-		float: left;
-		width: 40%;
-		height: 500px;
-		img{
-			width: 100%;
+	.page{
+		position: absolute;
+		width: calc(100% - 200px);
+		height: 600px;
+		box-sizing: border-box;
+		margin: calc(50vh - 300px) 100px;
+		padding: 50px;
+		left: 0;
+		background-color: white;
+		box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.3);
+		//home
+		.home{
+			font-size: 50px;
+			text-align: center;
+			display: block;
+			line-height: 50px;
+			margin-top: 200px;
+		}
+		//list
+		.align{
+			height: 480px;
 			vertical-align: middle;
+			width: 1%;
+			display: inline-block;
+		}
+		.content{
+			p{
+				margin-bottom: 20px;
+			}
+			a{
+				margin-right: 20px;
+			}
+			display: inline-block;
+			width: 54%;
+			vertical-align: middle;
+			box-sizing: border-box;
+			padding-left: 50px;
+			.title{}
+			.description{}
+			.tech{}
+			.link{}
+			.github{}
+		}
+		.img-group{
+			display: inline-block;
+			width: 45%;
+			vertical-align: middle;
+			img{
+				width: 100%;
+			}
+		}
+		//detail
+		header{
+			.title{
+				margin-right: 20px;
+			}
+			span{
+			}
+		}
+		.align{
+			height: 440px;
+			display: inline-block;
+			vertical-align: middle;
+			width: 1%;
+		}
+		.detail-content{
+			display: inline-block;
+			vertical-align: middle;
+			width: 54%;
+			padding-right: 50px;
+			box-sizing: border-box;
+			p{
+				margin-bottom: 20px;
+				span{}
+			}
+		}
+		.detail-img{
+			display: inline-block;
+			width: 45%;
+			vertical-align: middle;
+			img{
+				width: 100%;
+			}
+		}
+		//detail-summary
+		//detail-description
+		//detail-video
+		.video{
+			text-align: center;
+			iframe{
+				width: 100%;
+			}
 		}
 	}
 }

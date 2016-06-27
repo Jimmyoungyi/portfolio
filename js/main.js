@@ -38,7 +38,6 @@ $(function(){
 	})
 	//sub nav click
 	$(document).on("click",".detail li",function(){
-		
 		targetDetail = $(this).index();
 		changeDetail(targetDetail);
 	})
@@ -79,15 +78,6 @@ $(function(){
 	})
 	//go detail page
 	$(document).on("click",".go-detail",function(){
-		//console.log(data[currentProject].title);
-		currentDetail=0;
-		getContainer();
-		targetIn.html(
-				$("#detail-"+data[currentProject].detailpage[currentDetail].type+"-temp").html().replace(/{title}/g,data[currentProject].title)
-				)
-		animate=false;
-		targetIn.css({"top":"0%","left":"100vw"});
-		targetIn.animate({left:"0%"},800);
 		$(".active").parent().addClass("detail");
 		$(".active").removeClass("active");
 		$(".detail").find("ul .nav-point").eq(0).addClass("active");
@@ -96,6 +86,20 @@ $(function(){
 		$(".detail").find("ul").css("height",subnavHeight+"px");
 		$("nav").css({height:mainnavHeight+"px",top:($(window).height()-mainnavHeight)/2+"px"});
 		$("nav>ul").css("margin-top",-30*(currentProject-1)+"px");
+		//console.log(data[currentProject].title);
+		currentDetail=0;
+		getContainer();
+		targetIn.html(
+			$("#detail-summary-temp").html().replace(/{title}/g,data[currentProject].title)
+											.replace(/{background}/,data[currentProject].detailpage[0].background)
+											.replace(/{goal}/,data[currentProject].detailpage[0].goal)
+											.replace(/{solution}/,data[currentProject].detailpage[0].solution)
+											.replace(/{imgLink}/,data[currentProject].detailpage[0].imgLink)
+		)
+		targetIn.css("z-index","1");
+		targetOut.css("z-index","10");
+		animate=false;
+		targetIn.css({"top":"0%","left":"0"});
 		targetOut.animate({left:"-100vw"},800,function(){
 			animate=true;
 			detail=true;
@@ -131,6 +135,7 @@ $(function(){
 				$("#list-temp").html().replace(/{title}/g,data[newProject].title)
 										.replace(/{description}/,data[newProject].description)
 										.replace(/{tech}/,data[newProject].tech)
+										.replace(/{plantform}/,data[newProject].plantform)
 										.replace(/{link}/,data[newProject].link)
 										.replace(/{github}/,data[newProject].github)
 										.replace(/{imgLink}/,data[newProject].imgLink)
@@ -162,9 +167,29 @@ $(function(){
 		$(".detail .nav-point").eq(newDetail+1).addClass("active");
 		getContainer();
 		//load page
-		targetIn.html(
-			$("#detail-"+data[currentProject].detailpage[newDetail].type+"-temp").html().replace(/{title}/g,data[currentProject].title)
-		);
+			
+		if(newDetail == 0){
+			targetIn.html(
+				$("#detail-summary-temp").html().replace(/{title}/g,data[currentProject].title)
+												.replace(/{background}/,data[currentProject].detailpage[0].background)
+												.replace(/{goal}/,data[currentProject].detailpage[0].goal)
+												.replace(/{solution}/,data[currentProject].detailpage[0].solution)
+												.replace(/{imgLink}/,data[currentProject].detailpage[0].imgLink)
+			)
+		}else if(newDetail == 1){
+			targetIn.html(
+				$("#detail-description-temp").html().replace(/{title}/g,data[currentProject].title)
+												.replace(/{subtitle}/,data[currentProject].detailpage[1].subtitle)
+												.replace(/{imgLink}/,data[currentProject].detailpage[0].imgLink)
+			)
+			for(var i=0; i<data[currentProject].detailpage[1].list.length; i++){
+				targetIn.find("ul").append("<li>"+data[currentProject].detailpage[1].list[i]+"</li>");
+			}
+		}else{
+			targetIn.html(
+				$("#detail-"+data[currentProject].detailpage[newDetail].type+"-temp").html().replace(/{title}/g,data[currentProject].title)
+			);
+		}
 		//animate
 		if(targetDetail > currentDetail){
 			targetIn.css("z-index","1");
@@ -199,13 +224,9 @@ $(function(){
 		$(".detail").find("ul").css("height",subnavHeight+"px");
 		//content
 		getContainer();
+		console.log(newProject)
 		targetIn.html(
-			$("#list-temp").html().replace(/{title}/g,data[newProject].title)
-									.replace(/{description}/,data[newProject].description)
-									.replace(/{tech}/,data[newProject].tech)
-									.replace(/{link}/,data[newProject].link)
-									.replace(/{github}/,data[newProject].github)
-									.replace(/{imgLink}/,data[newProject].imgLink)
+			$("#detail-"+data[newProject].detailpage[currentDetail].type+"-temp").html().replace(/{title}/g,data[newProject].title)
 		)
 		//animate
 		animate=false;
@@ -247,6 +268,7 @@ $(function(){
 				$("#list-temp").html().replace(/{title}/g,data[newProject].title)
 										.replace(/{description}/,data[newProject].description)
 										.replace(/{tech}/,data[newProject].tech)
+										.replace(/{plantform}/,data[newProject].plantform)
 										.replace(/{link}/,data[newProject].link)
 										.replace(/{github}/,data[newProject].github)
 										.replace(/{imgLink}/,data[newProject].imgLink)

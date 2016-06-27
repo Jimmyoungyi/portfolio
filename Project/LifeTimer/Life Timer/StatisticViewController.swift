@@ -58,8 +58,8 @@ extension StatisticViewController: UITableViewDataSource{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("listCell")!
         let hue = 1 / CGFloat(DataManager.sharedInstance.sectionList.count) * CGFloat(indexPath.section)
-        let brightness = 0.5 + 0.5 / CGFloat(DataManager.sharedInstance.sectionList[indexPath.section].count) * CGFloat(indexPath.row)
-        cell.backgroundColor = UIColor.init(hue: hue, saturation: 1, brightness: brightness, alpha: 1)
+        let brightness = 0.8 - 0.4 / CGFloat(DataManager.sharedInstance.sectionList[indexPath.section].count) * CGFloat(indexPath.row)
+        cell.backgroundColor = UIColor.init(hue: hue, saturation: 0.6, brightness: brightness, alpha: 1)
         cell.textLabel?.text = DataManager.sharedInstance.sectionList[indexPath.section][indexPath.row].name
         cell.textLabel!.textColor = UIColor.whiteColor()
         return cell

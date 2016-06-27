@@ -31,7 +31,7 @@ class StatisticUIView: UIView {
             let hue = 1 / CGFloat(DataManager.sharedInstance.sectionList.count) * CGFloat(i)
             u = 0
             for item in list{
-                let brightness = 0.5 + 0.5 / CGFloat(DataManager.sharedInstance.sectionList[i].count) * CGFloat(u)
+                let brightness = 0.8 - 0.4 / CGFloat(DataManager.sharedInstance.sectionList[i].count) * CGFloat(u)
                 
                 let start = 0 - M_PI_2 + M_PI * 2 * Double(recordedduration) / Double(totalduration)
                 let end = M_PI * 2 * Double(item.duration!) / Double(totalduration)  + start
@@ -40,7 +40,7 @@ class StatisticUIView: UIView {
                 circlePath.addLineToPoint(CGPoint(x: bounds.width/2,y:175))
                 let shapeLayer = CAShapeLayer()
                 shapeLayer.path = circlePath.CGPath
-                shapeLayer.fillColor = UIColor.init(hue: hue, saturation: 1, brightness: brightness, alpha: 1).CGColor
+                shapeLayer.fillColor = UIColor.init(hue: hue, saturation: 0.6, brightness: brightness, alpha: 1).CGColor
                 self.layer.addSublayer(shapeLayer)
 
                 recordedduration += Int(item.duration!)

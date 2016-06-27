@@ -32,7 +32,7 @@ extension ListViewController:UITableViewDataSource
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let  headerCell = tableView.dequeueReusableCellWithIdentifier("headerCell") as! ListHeaderTableViewCell
         let hue = 1 / CGFloat(DataManager.sharedInstance.sectionList.count) * CGFloat(section)
-        headerCell.backgroundColor = UIColor.init(hue: hue, saturation: 0.75, brightness: 0.75, alpha: 1)
+        headerCell.backgroundColor = UIColor.init(hue: hue, saturation: 0.6, brightness: 0.7, alpha: 1)
         headerCell.title.text = DataManager.sharedInstance.list[section].name!
         headerCell.current = section
         return headerCell
