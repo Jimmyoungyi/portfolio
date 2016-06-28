@@ -46,17 +46,32 @@ var data=[
 	{
 		"title":"Dungeness Point",
 		"description":"This is anduggness track app. Users can upload where they find dungeness and share with other users.",
-		"plantform":"IOS",
+		"plantform":"Local app packaged by PhoneGap",
 		"tech":"HTML, CSS, Google Map API, jQuery mobile, php, my_squal, phonegap",
 		"link":"http://jimmyoungyi.com/aau/wnm617/phonegapG/www/index.html",
 		"github":"https://github.com/Jimmyoungyi/dungenessTrack",
 		"imgLink":"img/temp.jpg",
 		"detailpage":[
 			{
-				"type":"summary"
+				"type":"summary",
+				"background":"there are a lot of time manager app, but people need to know their self first.",
+				"goal":"build an app help people how they spend time.",
+				"solution":"they split one thing to small part. build a list, track how many time they spend on each part, let them know theirselves better.",
+				"imgLink":"img/Project_Lifetime_List.png"
 			},
 			{
-				"type":"description"
+				"type":"description",
+				"subtitle":"technic",
+				"list":[
+					"core data store infomation",
+					"drawing system",
+					"table view",
+					"picker view",
+					"timer",
+					"navigation controller",
+					"tab bar controller"
+				],
+				"imgLink":"img/Project_Lifetime_List.png"
 			},
 			{
 				"type":"video"
@@ -70,19 +85,34 @@ var data=[
 		]
 	},
 	{
-		"title":"Title Here 3",
-		"description":"this is how this app come out and how it works",
-		"plantform":"IOS",
-		"tech":"here is the language",
-		"link":"https://www.google.com/",
+		"title":"Enina Word",
+		"description":"Using English letter create Enina word looks like Chinese",
+		"plantform":"Single page website",
+		"tech":"HTML, CSS, JavaScript, jQuery",
+		"link":"http://jimmyoungyi.com/601/Yang_Jianyi_601final/button/",
 		"github":"https://github.com/Jimmyoungyi/GDS_RW_07_mid_markCrossStreet",
-		"imgLink":"img/temp.jpg",
+		"imgLink":"img/Project_Enina_List",
 		"detailpage":[
 			{
-				"type":"summary"
+				"type":"summary",
+				"background":"there are a lot of time manager app, but people need to know their self first.",
+				"goal":"build an app help people how they spend time.",
+				"solution":"they split one thing to small part. build a list, track how many time they spend on each part, let them know theirselves better.",
+				"imgLink":"img/Project_Lifetime_List.png"
 			},
 			{
-				"type":"description"
+				"type":"description",
+				"subtitle":"technic",
+				"list":[
+					"core data store infomation",
+					"drawing system",
+					"table view",
+					"picker view",
+					"timer",
+					"navigation controller",
+					"tab bar controller"
+				],
+				"imgLink":"img/Project_Lifetime_List.png"
 			},
 			{
 				"type":"video"
@@ -105,10 +135,25 @@ var data=[
 		"imgLink":"img/temp.jpg",
 		"detailpage":[
 			{
-				"type":"summary"
+				"type":"summary",
+				"background":"there are a lot of time manager app, but people need to know their self first.",
+				"goal":"build an app help people how they spend time.",
+				"solution":"they split one thing to small part. build a list, track how many time they spend on each part, let them know theirselves better.",
+				"imgLink":"img/Project_Lifetime_List.png"
 			},
 			{
-				"type":"description"
+				"type":"description",
+				"subtitle":"technic",
+				"list":[
+					"core data store infomation",
+					"drawing system",
+					"table view",
+					"picker view",
+					"timer",
+					"navigation controller",
+					"tab bar controller"
+				],
+				"imgLink":"img/Project_Lifetime_List.png"
 			},
 			{
 				"type":"video"
