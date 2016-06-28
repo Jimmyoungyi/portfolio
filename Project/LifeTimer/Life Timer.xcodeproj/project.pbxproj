@@ -1,0 +1,646 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE684AB21CDC725A0075D344 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE684AB11CDC725A0075D344 /* AddItemViewController.swift */; };
+		DE684AB41CDD32380075D344 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE684AB31CDD32380075D344 /* TimerViewController.swift */; };
+		DE81D25F1CEE4EAF00BA8469 /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE81D25D1CEE4EAF00BA8469 /* StatisticViewController.swift */; };
+		DE81D2601CEE4EAF00BA8469 /* StatisticUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE81D25E1CEE4EAF00BA8469 /* StatisticUIView.swift */; };
+		DE81D26C1CEE779F00BA8469 /* AkiraTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE81D2621CEE779F00BA8469 /* AkiraTextField.swift */; };
+		DE81D26D1CEE779F00BA8469 /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE81D2631CEE779F00BA8469 /* HoshiTextField.swift */; };
+		DE81D26E1CEE779F00BA8469 /* IsaoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE81D2641CEE779F00BA8469 /* IsaoTextField.swift */; };
+		DE81D26F1CEE779F00BA8469 /* JiroTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE81D2651CEE779F00BA8469 /* JiroTextField.swift */; };
+		DE81D2701CEE779F00BA8469 /* KaedeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE81D2661CEE779F00BA8469 /* KaedeTextField.swift */; };
+		DE81D2711CEE779F00BA8469 /* MadokaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE81D2671CEE779F00BA8469 /* MadokaTextField.swift */; };
+		DE81D2721CEE779F00BA8469 /* MinoruTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE81D2681CEE779F00BA8469 /* MinoruTextField.swift */; };
+		DE81D2731CEE779F00BA8469 /* TextFieldsEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE81D2691CEE779F00BA8469 /* TextFieldsEffects.swift */; };
+		DE81D2741CEE779F00BA8469 /* YokoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE81D26A1CEE779F00BA8469 /* YokoTextField.swift */; };
+		DE81D2751CEE779F00BA8469 /* YoshikoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE81D26B1CEE779F00BA8469 /* YoshikoTextField.swift */; };
+		DE81D2771CEE77BC00BA8469 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE81D2761CEE77BC00BA8469 /* CustomButton.swift */; };
+		DE81D2791CEE88F600BA8469 /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE81D2781CEE88F600BA8469 /* Tool.swift */; };
+		DEE6745A1CD54E2700941731 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE674591CD54E2700941731 /* AppDelegate.swift */; };
+		DEE6745C1CD54E2700941731 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE6745B1CD54E2700941731 /* ListViewController.swift */; };
+		DEE6745F1CD54E2700941731 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE6745D1CD54E2700941731 /* Main.storyboard */; };
+		DEE674621CD54E2700941731 /* Life_Timer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEE674601CD54E2700941731 /* Life_Timer.xcdatamodeld */; };
+		DEE674641CD54E2700941731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEE674631CD54E2700941731 /* Assets.xcassets */; };
+		DEE674671CD54E2700941731 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE674651CD54E2700941731 /* LaunchScreen.storyboard */; };
+		DEE674721CD54E2700941731 /* Life_TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE674711CD54E2700941731 /* Life_TimerTests.swift */; };
+		DEE6747D1CD54E2700941731 /* Life_TimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE6747C1CD54E2700941731 /* Life_TimerUITests.swift */; };
+		DEE6748E1CD56C5500941731 /* List+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE6748A1CD56C5500941731 /* List+CoreDataProperties.swift */; };
+		DEE6748F1CD56C5500941731 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE6748B1CD56C5500941731 /* List.swift */; };
+		DEE674901CD56C5500941731 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE6748C1CD56C5500941731 /* Item+CoreDataProperties.swift */; };
+		DEE674911CD56C5500941731 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE6748D1CD56C5500941731 /* Item.swift */; };
+		DEE674941CD56C7600941731 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE674931CD56C7600941731 /* DataManager.swift */; };
+		DEE674971CD56CC100941731 /* ListHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE674961CD56CC100941731 /* ListHeaderTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DEE6746E1CD54E2700941731 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEE6744E1CD54E2700941731 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DEE674551CD54E2700941731;
+			remoteInfo = "Life Timer";
+		};
+		DEE674791CD54E2700941731 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEE6744E1CD54E2700941731 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DEE674551CD54E2700941731;
+			remoteInfo = "Life Timer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DE684AB11CDC725A0075D344 /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		DE684AB31CDD32380075D344 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		DE81D25D1CEE4EAF00BA8469 /* StatisticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
+		DE81D25E1CEE4EAF00BA8469 /* StatisticUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticUIView.swift; sourceTree = "<group>"; };
+		DE81D2621CEE779F00BA8469 /* AkiraTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AkiraTextField.swift; path = ../AkiraTextField.swift; sourceTree = "<group>"; };
+		DE81D2631CEE779F00BA8469 /* HoshiTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HoshiTextField.swift; path = ../HoshiTextField.swift; sourceTree = "<group>"; };
+		DE81D2641CEE779F00BA8469 /* IsaoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IsaoTextField.swift; path = ../IsaoTextField.swift; sourceTree = "<group>"; };
+		DE81D2651CEE779F00BA8469 /* JiroTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JiroTextField.swift; path = ../JiroTextField.swift; sourceTree = "<group>"; };
+		DE81D2661CEE779F00BA8469 /* KaedeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KaedeTextField.swift; path = ../KaedeTextField.swift; sourceTree = "<group>"; };
+		DE81D2671CEE779F00BA8469 /* MadokaTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MadokaTextField.swift; path = ../MadokaTextField.swift; sourceTree = "<group>"; };
+		DE81D2681CEE779F00BA8469 /* MinoruTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MinoruTextField.swift; path = ../MinoruTextField.swift; sourceTree = "<group>"; };
+		DE81D2691CEE779F00BA8469 /* TextFieldsEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldsEffects.swift; path = ../TextFieldsEffects.swift; sourceTree = "<group>"; };
+		DE81D26A1CEE779F00BA8469 /* YokoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YokoTextField.swift; path = ../YokoTextField.swift; sourceTree = "<group>"; };
+		DE81D26B1CEE779F00BA8469 /* YoshikoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YoshikoTextField.swift; path = ../YoshikoTextField.swift; sourceTree = "<group>"; };
+		DE81D2761CEE77BC00BA8469 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		DE81D2781CEE88F600BA8469 /* Tool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tool.swift; sourceTree = "<group>"; };
+		DEE674561CD54E2700941731 /* Life Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Life Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEE674591CD54E2700941731 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DEE6745B1CD54E2700941731 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		DEE6745E1CD54E2700941731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DEE674611CD54E2700941731 /* Life_Timer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Life_Timer.xcdatamodel; sourceTree = "<group>"; };
+		DEE674631CD54E2700941731 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DEE674661CD54E2700941731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DEE674681CD54E2700941731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEE6746D1CD54E2700941731 /* Life TimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Life TimerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEE674711CD54E2700941731 /* Life_TimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Life_TimerTests.swift; sourceTree = "<group>"; };
+		DEE674731CD54E2700941731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEE674781CD54E2700941731 /* Life TimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Life TimerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEE6747C1CD54E2700941731 /* Life_TimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Life_TimerUITests.swift; sourceTree = "<group>"; };
+		DEE6747E1CD54E2700941731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEE6748A1CD56C5500941731 /* List+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "List+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DEE6748B1CD56C5500941731 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		DEE6748C1CD56C5500941731 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DEE6748D1CD56C5500941731 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		DEE674931CD56C7600941731 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		DEE674961CD56CC100941731 /* ListHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListHeaderTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DEE674531CD54E2700941731 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEE6746A1CD54E2700941731 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEE674751CD54E2700941731 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE81D2611CEE776000BA8469 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				DE81D2781CEE88F600BA8469 /* Tool.swift */,
+				DE81D2761CEE77BC00BA8469 /* CustomButton.swift */,
+				DE81D2621CEE779F00BA8469 /* AkiraTextField.swift */,
+				DE81D2631CEE779F00BA8469 /* HoshiTextField.swift */,
+				DE81D2641CEE779F00BA8469 /* IsaoTextField.swift */,
+				DE81D2651CEE779F00BA8469 /* JiroTextField.swift */,
+				DE81D2661CEE779F00BA8469 /* KaedeTextField.swift */,
+				DE81D2671CEE779F00BA8469 /* MadokaTextField.swift */,
+				DE81D2681CEE779F00BA8469 /* MinoruTextField.swift */,
+				DE81D2691CEE779F00BA8469 /* TextFieldsEffects.swift */,
+				DE81D26A1CEE779F00BA8469 /* YokoTextField.swift */,
+				DE81D26B1CEE779F00BA8469 /* YoshikoTextField.swift */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		DEE6744D1CD54E2700941731 = {
+			isa = PBXGroup;
+			children = (
+				DEE674581CD54E2700941731 /* Life Timer */,
+				DEE674701CD54E2700941731 /* Life TimerTests */,
+				DEE6747B1CD54E2700941731 /* Life TimerUITests */,
+				DEE674571CD54E2700941731 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DEE674571CD54E2700941731 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DEE674561CD54E2700941731 /* Life Timer.app */,
+				DEE6746D1CD54E2700941731 /* Life TimerTests.xctest */,
+				DEE674781CD54E2700941731 /* Life TimerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DEE674581CD54E2700941731 /* Life Timer */ = {
+			isa = PBXGroup;
+			children = (
+				DEE674591CD54E2700941731 /* AppDelegate.swift */,
+				DEE674921CD56C6300941731 /* Data */,
+				DEE674951CD56CB200941731 /* View */,
+				DE81D2611CEE776000BA8469 /* Library */,
+				DEE6745D1CD54E2700941731 /* Main.storyboard */,
+				DEE674631CD54E2700941731 /* Assets.xcassets */,
+				DEE674651CD54E2700941731 /* LaunchScreen.storyboard */,
+				DEE674681CD54E2700941731 /* Info.plist */,
+				DEE674601CD54E2700941731 /* Life_Timer.xcdatamodeld */,
+			);
+			path = "Life Timer";
+			sourceTree = "<group>";
+		};
+		DEE674701CD54E2700941731 /* Life TimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				DEE674711CD54E2700941731 /* Life_TimerTests.swift */,
+				DEE674731CD54E2700941731 /* Info.plist */,
+			);
+			path = "Life TimerTests";
+			sourceTree = "<group>";
+		};
+		DEE6747B1CD54E2700941731 /* Life TimerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DEE6747C1CD54E2700941731 /* Life_TimerUITests.swift */,
+				DEE6747E1CD54E2700941731 /* Info.plist */,
+			);
+			path = "Life TimerUITests";
+			sourceTree = "<group>";
+		};
+		DEE674921CD56C6300941731 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DEE6748A1CD56C5500941731 /* List+CoreDataProperties.swift */,
+				DEE6748B1CD56C5500941731 /* List.swift */,
+				DEE6748C1CD56C5500941731 /* Item+CoreDataProperties.swift */,
+				DEE6748D1CD56C5500941731 /* Item.swift */,
+				DEE674931CD56C7600941731 /* DataManager.swift */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		DEE674951CD56CB200941731 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DEE6745B1CD54E2700941731 /* ListViewController.swift */,
+				DEE674961CD56CC100941731 /* ListHeaderTableViewCell.swift */,
+				DE684AB11CDC725A0075D344 /* AddItemViewController.swift */,
+				DE684AB31CDD32380075D344 /* TimerViewController.swift */,
+				DE81D25D1CEE4EAF00BA8469 /* StatisticViewController.swift */,
+				DE81D25E1CEE4EAF00BA8469 /* StatisticUIView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DEE674551CD54E2700941731 /* Life Timer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEE674811CD54E2700941731 /* Build configuration list for PBXNativeTarget "Life Timer" */;
+			buildPhases = (
+				DEE674521CD54E2700941731 /* Sources */,
+				DEE674531CD54E2700941731 /* Frameworks */,
+				DEE674541CD54E2700941731 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Life Timer";
+			productName = "Life Timer";
+			productReference = DEE674561CD54E2700941731 /* Life Timer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DEE6746C1CD54E2700941731 /* Life TimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEE674841CD54E2700941731 /* Build configuration list for PBXNativeTarget "Life TimerTests" */;
+			buildPhases = (
+				DEE674691CD54E2700941731 /* Sources */,
+				DEE6746A1CD54E2700941731 /* Frameworks */,
+				DEE6746B1CD54E2700941731 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEE6746F1CD54E2700941731 /* PBXTargetDependency */,
+			);
+			name = "Life TimerTests";
+			productName = "Life TimerTests";
+			productReference = DEE6746D1CD54E2700941731 /* Life TimerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DEE674771CD54E2700941731 /* Life TimerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEE674871CD54E2700941731 /* Build configuration list for PBXNativeTarget "Life TimerUITests" */;
+			buildPhases = (
+				DEE674741CD54E2700941731 /* Sources */,
+				DEE674751CD54E2700941731 /* Frameworks */,
+				DEE674761CD54E2700941731 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEE6747A1CD54E2700941731 /* PBXTargetDependency */,
+			);
+			name = "Life TimerUITests";
+			productName = "Life TimerUITests";
+			productReference = DEE674781CD54E2700941731 /* Life TimerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DEE6744E1CD54E2700941731 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = yangjianyi;
+				TargetAttributes = {
+					DEE674551CD54E2700941731 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 6FPR4TZ2WA;
+					};
+					DEE6746C1CD54E2700941731 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 6FPR4TZ2WA;
+						TestTargetID = DEE674551CD54E2700941731;
+					};
+					DEE674771CD54E2700941731 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 6FPR4TZ2WA;
+						TestTargetID = DEE674551CD54E2700941731;
+					};
+				};
+			};
+			buildConfigurationList = DEE674511CD54E2700941731 /* Build configuration list for PBXProject "Life Timer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DEE6744D1CD54E2700941731;
+			productRefGroup = DEE674571CD54E2700941731 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DEE674551CD54E2700941731 /* Life Timer */,
+				DEE6746C1CD54E2700941731 /* Life TimerTests */,
+				DEE674771CD54E2700941731 /* Life TimerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DEE674541CD54E2700941731 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEE674671CD54E2700941731 /* LaunchScreen.storyboard in Resources */,
+				DEE674641CD54E2700941731 /* Assets.xcassets in Resources */,
+				DEE6745F1CD54E2700941731 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEE6746B1CD54E2700941731 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEE674761CD54E2700941731 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DEE674521CD54E2700941731 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE81D2791CEE88F600BA8469 /* Tool.swift in Sources */,
+				DEE674901CD56C5500941731 /* Item+CoreDataProperties.swift in Sources */,
+				DEE674941CD56C7600941731 /* DataManager.swift in Sources */,
+				DE81D26C1CEE779F00BA8469 /* AkiraTextField.swift in Sources */,
+				DE81D26E1CEE779F00BA8469 /* IsaoTextField.swift in Sources */,
+				DEE6745C1CD54E2700941731 /* ListViewController.swift in Sources */,
+				DE81D25F1CEE4EAF00BA8469 /* StatisticViewController.swift in Sources */,
+				DE81D2701CEE779F00BA8469 /* KaedeTextField.swift in Sources */,
+				DE81D2721CEE779F00BA8469 /* MinoruTextField.swift in Sources */,
+				DEE674621CD54E2700941731 /* Life_Timer.xcdatamodeld in Sources */,
+				DEE674971CD56CC100941731 /* ListHeaderTableViewCell.swift in Sources */,
+				DE81D2731CEE779F00BA8469 /* TextFieldsEffects.swift in Sources */,
+				DE81D2751CEE779F00BA8469 /* YoshikoTextField.swift in Sources */,
+				DE684AB21CDC725A0075D344 /* AddItemViewController.swift in Sources */,
+				DE81D26F1CEE779F00BA8469 /* JiroTextField.swift in Sources */,
+				DE81D2601CEE4EAF00BA8469 /* StatisticUIView.swift in Sources */,
+				DE81D26D1CEE779F00BA8469 /* HoshiTextField.swift in Sources */,
+				DEE6745A1CD54E2700941731 /* AppDelegate.swift in Sources */,
+				DEE674911CD56C5500941731 /* Item.swift in Sources */,
+				DE81D2741CEE779F00BA8469 /* YokoTextField.swift in Sources */,
+				DEE6748F1CD56C5500941731 /* List.swift in Sources */,
+				DE81D2771CEE77BC00BA8469 /* CustomButton.swift in Sources */,
+				DE684AB41CDD32380075D344 /* TimerViewController.swift in Sources */,
+				DE81D2711CEE779F00BA8469 /* MadokaTextField.swift in Sources */,
+				DEE6748E1CD56C5500941731 /* List+CoreDataProperties.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEE674691CD54E2700941731 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEE674721CD54E2700941731 /* Life_TimerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEE674741CD54E2700941731 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEE6747D1CD54E2700941731 /* Life_TimerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DEE6746F1CD54E2700941731 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DEE674551CD54E2700941731 /* Life Timer */;
+			targetProxy = DEE6746E1CD54E2700941731 /* PBXContainerItemProxy */;
+		};
+		DEE6747A1CD54E2700941731 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DEE674551CD54E2700941731 /* Life Timer */;
+			targetProxy = DEE674791CD54E2700941731 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DEE6745D1CD54E2700941731 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEE6745E1CD54E2700941731 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DEE674651CD54E2700941731 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEE674661CD54E2700941731 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DEE6747F1CD54E2700941731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DEE674801CD54E2700941731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DEE674821CD54E2700941731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Life Timer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jimmyoungyi.Life-Timer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		DEE674831CD54E2700941731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Life Timer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jimmyoungyi.Life-Timer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		DEE674851CD54E2700941731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Life TimerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jimmyoungyi.Life-TimerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Life Timer.app/Life Timer";
+			};
+			name = Debug;
+		};
+		DEE674861CD54E2700941731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Life TimerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jimmyoungyi.Life-TimerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Life Timer.app/Life Timer";
+			};
+			name = Release;
+		};
+		DEE674881CD54E2700941731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Life TimerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jimmyoungyi.Life-TimerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Life Timer";
+			};
+			name = Debug;
+		};
+		DEE674891CD54E2700941731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Life TimerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jimmyoungyi.Life-TimerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Life Timer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DEE674511CD54E2700941731 /* Build configuration list for PBXProject "Life Timer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEE6747F1CD54E2700941731 /* Debug */,
+				DEE674801CD54E2700941731 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEE674811CD54E2700941731 /* Build configuration list for PBXNativeTarget "Life Timer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEE674821CD54E2700941731 /* Debug */,
+				DEE674831CD54E2700941731 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEE674841CD54E2700941731 /* Build configuration list for PBXNativeTarget "Life TimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEE674851CD54E2700941731 /* Debug */,
+				DEE674861CD54E2700941731 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEE674871CD54E2700941731 /* Build configuration list for PBXNativeTarget "Life TimerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEE674881CD54E2700941731 /* Debug */,
+				DEE674891CD54E2700941731 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DEE674601CD54E2700941731 /* Life_Timer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DEE674611CD54E2700941731 /* Life_Timer.xcdatamodel */,
+			);
+			currentVersion = DEE674611CD54E2700941731 /* Life_Timer.xcdatamodel */;
+			path = Life_Timer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DEE6744E1CD54E2700941731 /* Project object */;
+}
