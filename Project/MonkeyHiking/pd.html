@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<style>
+body{
+	background-color:#A4A4A4;
+	}
+#wrapper{
+	background-image:url(img/webd.png);
+	width:1000px;
+	height:1000px;
+	margin:auto;
+	position:relative;
+	}
+#Introduce{
+	width:84px;
+	height:21px;
+	position:absolute;
+	top:297px;
+	left:153px;
+	}
+#ICONDesign{
+	width:108px;
+	height:21px;
+	position:absolute;
+	top:342px;
+	left:153px;
+	}
+#Flowchart{
+	width:86px;
+	height:21px;
+	position:absolute;
+	top:386px;
+	left:153px;
+	}
+#AppShow{
+	width:84px;
+	height:21px;
+	position:absolute;
+	top:430px;
+	left:153px;
+	}
+#phone{
+	position:absolute;
+	left:437px;
+	top:78px;
+	}
+#lod{
+	position:absolute;
+	left:471px;
+	top:204px;
+	}
+#btn{
+	width:98px;
+	height:98px;
+	position:absolute;
+	left:600px;
+	top:820px;
+	}
+</style>
+<script type="text/javascript" src="jq.js">
+</script>
+<script type="text/javascript">
+
+function sow(){
+
+	document.getElementById("lod").innerHTML="<embed width='346' height='615' src='again.swf' id='abc'></embed>"
+	
+}
+</script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header></header>
+        <nav></nav>
+        <div id="a"></div>
+        <div id="Introduce" onclick="window.location.href='index.html'"></div>
+        <div id="ICONDesign" onclick="window.location.href='pb.html'"></div>
+        <div id="Flowchart" onclick="window.location.href='pc.html'"></div>
+        <div id="AppShow"></div>
+        <div id="phone">
+            <img src="img/phone.png">
+        </div>
+        <div id="lod">
+            <embed width="346" height="615" src="again.swf" id="abc"></embed>
+        </div>
+        <div id="btn" onclick="sow()"></div>
+        
+        <footer></footer>
+    </div>
+</body>
+</html>

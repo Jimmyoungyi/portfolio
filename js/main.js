@@ -226,7 +226,11 @@ $(function(){
 		getContainer();
 		console.log(newProject)
 		targetIn.html(
-			$("#detail-"+data[newProject].detailpage[currentDetail].type+"-temp").html().replace(/{title}/g,data[newProject].title)
+			$("#detail-summary-temp").html().replace(/{title}/g,data[newProject].title)
+											.replace(/{background}/,data[newProject].detailpage[0].background)
+											.replace(/{goal}/,data[newProject].detailpage[0].goal)
+											.replace(/{solution}/,data[newProject].detailpage[0].solution)
+											.replace(/{imgLink}/,data[newProject].detailpage[0].imgLink)
 		)
 		//animate
 		animate=false;
