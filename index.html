@@ -28,6 +28,18 @@
 <script type="text/template" id="home-temp">
 	<span class="home">{title}</span>
 </script>
+<script type="text/template" id="contact-temp">
+	<div class="contact">
+		<p class="text-subtitle">Leave a Message</p>
+		<form action="mail.php" method="post">
+			<label for="name"><span>Name: </span><br><input type="text" id="name" name="name"></label>
+			<br>
+			<label for="message"><span>Message: </span><br><textarea name="message" id="message" cols="30" rows="10"></textarea></label>
+			<br>
+			<input class="submit" type="submit">
+		</form>
+	</div>
+</script>
 <script type="text/template" id="list-temp">
 	<div class="align">
 	</div><div class="content">
@@ -48,18 +60,18 @@
 		<span class="text-title">Summary</span>
 	</header>
 	<div class="align">
-	</div><div class="detail-content">
+	</div><div class="detail-content summary-content">
 		<p>
 			<span class="text-subtitle">Background</span><br>
-			{background}
+			<span class="description">{background}</span>
 		</p>
 		<p>
 			<span class="text-subtitle">Goal</span><br>
-			{goal}
+			<span class="description">{goal}</span>
 		</p>
 		<p>
 			<span class="text-subtitle">Solution</span><br>
-			{solution}
+			<span class="description">{solution}</span>
 		</p>
 	</div><div class="detail-img">
 		<img src="{imgLink}" alt="">
@@ -71,7 +83,7 @@
 		<span class="text-title">Description - {subtitle}</span>
 	</header>
 	<div class="align">
-	</div><div class="detail-content">
+	</div><div class="detail-content description-content">
 		<ul>
 			
 		</ul>
@@ -85,13 +97,13 @@
 		<span class="text-title">Video</span>
 	</header>
 	<div class="video">
-		<iframe src="https://player.vimeo.com/video/172488582?title=0&byline=0&portrait=0" width="600" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		<iframe src="{videoLink}" width="600" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	</div>
 </script>
-<script type="text/template" id="detail-sitmap-temp">
+<script type="text/template" id="detail-sitemap-temp">
 	<header>
 		<span class="title text-header">{title}</span>
-		<span class="text-title">Sitmap</span>
+		<span class="text-title">Sitemap</span>
 	</header>
 </script>
 <script type="text/template" id="detail-taskflow-temp">
@@ -99,5 +111,12 @@
 		<span class="title text-header">{title}</span>
 		<span class="text-title">Taskflow</span>
 	</header>
+	<div class="align">
+	</div><div class="detail-content taskflow-content">
+		<span class="text-subtitle">{taskname}</span><br>
+		<span class="description">{description}</span>
+	</div><div class="detail-img">
+		<img class="{imgType}" src="{imgLink}" alt="">
+	</div>
 </script>
 </html>

@@ -4,42 +4,58 @@ var data=[
 	},
 	{
 		"title":"Life Timer",
-		"description":"This is a timer app that helps user track how they spend their times.",
+		"description":"Life Timer is an app that can help users understand how they spend time on each progress for one project. It helps users know themselves better and improve their efficient.",
 		"plantform":"IOS",
 		"tech":"XCode, Swift",
-		"link":"https://github.com/Jimmyoungyi/portfolio/tree/project-lifetime-kindofdone/Project/LifeTimer",
-		"github":"https://github.com/Jimmyoungyi/portfolio/tree/project-lifetime-kindofdone/Project/LifeTimer",
+		"link":"https://github.com/Jimmyoungyi/portfolio/tree/project-monkeyhiking-original/Project/LifeTimer",
+		"github":"https://github.com/Jimmyoungyi/portfolio/tree/project-monkeyhiking-original/Project/LifeTimer",
 		"imgLink":"img/Project_Lifetime_List.png",
 		"detailpage":[
 			{
 				"type":"summary",
-				"background":"there are a lot of time manager app, but people need to know their self first.",
-				"goal":"build an app help people how they spend time.",
-				"solution":"they split one thing to small part. build a list, track how many time they spend on each part, let them know theirselves better.",
-				"imgLink":"img/Project_Lifetime_List.png"
+				"background":"There are a lot of time manage apps now. However, people should know how they spend their time first. Then start to manage their time.",
+				"goal":"Build an IOS app to help users know how they use their time.",
+				"solution":"First, users need to create a list that includes each step they will working on, and then start the timer. When they working on the different step, they select that step from the list. After they finish the job, they can stop the timer and check the statistic from the app.",
+				"imgLink":"img/Project_Lifetime_detail_summary.png"
 			},
 			{
 				"type":"description",
 				"subtitle":"technic",
 				"list":[
-					"core data store infomation",
-					"drawing system",
-					"table view",
-					"picker view",
-					"timer",
-					"navigation controller",
-					"tab bar controller"
+					"Using Core Data store list data",
+					"Using drawRect function draw data statistic",
+					"Using Navigation Controller and Tab Bar Controller build navigation system",
+					"Using multiple views, delegates and open source build layout "
 				],
-				"imgLink":"img/Project_Lifetime_List.png"
+				"imgLink":"img/Project_Lifetime_detail_tech.png"
 			},
 			{
-				"type":"video"
+				"type":"video",
+				"videoLink":"https://player.vimeo.com/video/172488582?title=0&byline=0&portrait=0"
 			},
 			{
-				"type":"sitmap"
+				"type":"sitemap"
 			},
 			{
-				"type":"taskflow"
+				"type":"taskflow",
+				"taskname":"1.1 Create List",
+				"description":"Create a list with sections that includes all phases of your works. This list can be edited during timer run.",
+				"imgType":"borderimg highimg ",
+				"imgLink":"img/Project_Lifetime_detail_task1.gif"
+			},
+			{
+				"type":"taskflow",
+				"taskname":"1.2 Start Timer",
+				"description":"Start the timer. When you working on different phases, switch to that selection to count the time.",
+				"imgType":"borderimg highimg ",
+				"imgLink":"img/Project_Lifetime_detail_task2.gif"
+			},
+			{
+				"type":"taskflow",
+				"taskname":"1.3 View Statistic",
+				"description":"View the results of data statistic.",
+				"imgType":"borderimg highimg ",
+				"imgLink":"img/Project_Lifetime_detail_task3.png"
 			}
 		]
 	},
@@ -48,7 +64,7 @@ var data=[
 		"description":"This app use old google map API which is not working anymore. I am rebuilding the map part of this project",
 		//"This is anduggness track app. Users can upload where they find dungeness and share with other users.",
 		"plantform":"Local app packaged by PhoneGap",
-		"tech":"HTML, CSS, Google Map API, jQuery mobile, php, my_squal, phonegap",
+		"tech":"HTML, CSS, Google Map API, jQuery mobile, php, MySQL, PhoneGap",
 		"link":"http://jimmyoungyi.com/aau/wnm617/phonegapG/www/index.html",
 		"github":"https://github.com/Jimmyoungyi/dungenessTrack",
 		"imgLink":"img/temp.png",
@@ -75,13 +91,16 @@ var data=[
 				"imgLink":"img/temp.png"
 			},
 			{
-				"type":"video"
+				"type":"video",
+				"videoLink":"https://player.vimeo.com/video/172488582?title=0&byline=0&portrait=0"
 			},
 			{
-				"type":"sitmap"
+				"type":"sitemap"
 			},
 			{
-				"type":"taskflow"
+				"type":"taskflow",
+				"imgType":"borderimg highimg ",
+				"imgLink":"img/Project_Lifetime_detail_task3.png"
 			}
 		]
 	},
@@ -110,31 +129,34 @@ var data=[
 				"imgLink":"img/Project_Enina_List.png"
 			},
 			{
-				"type":"video"
+				"type":"video",
+				"videoLink":"https://player.vimeo.com/video/172488582?title=0&byline=0&portrait=0"
 			},
 			{
-				"type":"sitmap"
+				"type":"sitemap"
 			},
 			{
-				"type":"taskflow"
+				"type":"taskflow",
+				"imgType":"borderimg highimg ",
+				"imgLink":"img/Project_Lifetime_detail_task3.png"
 			}
 		]
 	},
 	{
-		"title":"Title Here 4",
-		"description":"this is how this app come out and how it works",
-		"plantform":"IOS",
-		"tech":"here is the language",
-		"link":"https://www.google.com/",
+		"title":"Monkey Hiking",
+		"description":"Monkey Hiking is an app help people find hiking groups and track their hiking routine.",
+		"plantform":"App simulator",
+		"tech":"ActionScript 3",
+		"link":"http://jimmyoungyi.com/606final/index.html",
 		"github":"https://github.com/Jimmyoungyi/GDS_RW_07_mid_markCrossStreet",
-		"imgLink":"img/temp.png",
+		"imgLink":"img/Project_MonkeyHiking_List.png",
 		"detailpage":[
 			{
 				"type":"summary",
 				"background":"there are a lot of time manager app, but people need to know their self first.",
 				"goal":"build an app help people how they spend time.",
 				"solution":"they split one thing to small part. build a list, track how many time they spend on each part, let them know theirselves better.",
-				"imgLink":"img/Project_Lifetime_List.png"
+				"imgLink":"img/Project_MonkeyHiking_List.png"
 			},
 			{
 				"type":"description",
@@ -148,18 +170,24 @@ var data=[
 					"navigation controller",
 					"tab bar controller"
 				],
-				"imgLink":"img/Project_Lifetime_List.png"
+				"imgLink":"img/Project_MonkeyHiking_List.png"
 			},
 			{
-				"type":"video"
+				"type":"video",
+				"videoLink":"https://player.vimeo.com/video/172488582?title=0&byline=0&portrait=0"
 			},
 			{
-				"type":"sitmap"
+				"type":"sitemap"
 			},
 			{
-				"type":"taskflow"
+				"type":"taskflow",
+				"imgType":"borderimg highimg ",
+				"imgLink":"img/Project_Lifetime_detail_task3.png"
 			}
 		]
+	},
+	{
+		"title":"Contact"
 	}
 ]
 // name----single page web----app----now working----trip----infography----durpal----contect

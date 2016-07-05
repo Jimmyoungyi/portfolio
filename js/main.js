@@ -26,7 +26,7 @@ $(function(){
 	//nav click
 	$("nav>ul>li>div").click(function(){
 		if(detail){
-			if($(this).parent().index()==0||$(this).parent().index()==currentProject){
+			if($(this).parent().index()==0 || $(this).parent().index()==currentProject || $(this).parent().index()==data.length-1){
 				goHome($(this).parent().index());
 			}else{
 				changeProjectDetail($(this).parent().index());
@@ -78,34 +78,10 @@ $(function(){
 	})
 	//go detail page
 	$(document).on("click",".go-detail",function(){
-		$(".active").parent().addClass("detail");
-		$(".active").removeClass("active");
-		$(".detail").find("ul .nav-point").eq(0).addClass("active");
-		var subnavHeight = data[currentProject].detailpage.length*30+10;
-		var mainnavHeight = subnavHeight+90;
-		$(".detail").find("ul").css("height",subnavHeight+"px");
-		$("nav").css({height:mainnavHeight+"px",top:($(window).height()-mainnavHeight)/2+"px"});
-		$("nav>ul").css("margin-top",-30*(currentProject-1)+"px");
-		//console.log(data[currentProject].title);
-		currentDetail=0;
-		getContainer();
-		targetIn.html(
-			$("#detail-summary-temp").html().replace(/{title}/g,data[currentProject].title)
-											.replace(/{background}/,data[currentProject].detailpage[0].background)
-											.replace(/{goal}/,data[currentProject].detailpage[0].goal)
-											.replace(/{solution}/,data[currentProject].detailpage[0].solution)
-											.replace(/{imgLink}/,data[currentProject].detailpage[0].imgLink)
-		)
-		targetIn.css("z-index","1");
-		targetOut.css("z-index","10");
-		animate=false;
-		targetIn.css({"top":"0%","left":"0"});
-		targetOut.animate({left:"-100vw"},800,function(){
-			animate=true;
-			detail=true;
-			document.location="#"+data[currentProject].title.replace(/\s+/g, '');
-		});
-		defaultPage = !defaultPage;
+		goDetial();
+	})
+	$(document).on("click",".img-group img",function(){
+		goDetial();
 	})
 	//load porject function
 	changeProject(0);
@@ -130,6 +106,8 @@ $(function(){
 		//load page
 		if(newProject == 0){
 			targetIn.html($("#home-temp").html().replace(/{title}/,data[0].title));
+		}else if(newProject == data.length-1){
+			targetIn.html($("#contact-temp").html().replace(/{title}/,data[0].title));
 		}else{
 			targetIn.html(
 				$("#list-temp").html().replace(/{title}/g,data[newProject].title)
@@ -160,6 +138,37 @@ $(function(){
 		currentProject = newProject;
 		defaultPage = !defaultPage;
 	}
+	//go detail
+	function goDetial(){
+		$(".active").parent().addClass("detail");
+		$(".active").removeClass("active");
+		$(".detail").find("ul .nav-point").eq(0).addClass("active");
+		var subnavHeight = data[currentProject].detailpage.length*30+10;
+		var mainnavHeight = subnavHeight+90;
+		$(".detail").find("ul").css("height",subnavHeight+"px");
+		$("nav").css({height:mainnavHeight+"px",top:($(window).height()-mainnavHeight)/2+"px"});
+		$("nav>ul").css("margin-top",-30*(currentProject-1)+"px");
+		//console.log(data[currentProject].title);
+		currentDetail=0;
+		getContainer();
+		targetIn.html(
+			$("#detail-summary-temp").html().replace(/{title}/g,data[currentProject].title)
+											.replace(/{background}/,data[currentProject].detailpage[0].background)
+											.replace(/{goal}/,data[currentProject].detailpage[0].goal)
+											.replace(/{solution}/,data[currentProject].detailpage[0].solution)
+											.replace(/{imgLink}/,data[currentProject].detailpage[0].imgLink)
+		)
+		targetIn.css("z-index","1");
+		targetOut.css("z-index","10");
+		animate=false;
+		targetIn.css({"top":"0%","left":"0"});
+		targetOut.animate({left:"-100vw"},800,function(){
+			animate=true;
+			detail=true;
+			document.location="#"+data[currentProject].title.replace(/\s+/g, '');
+		});
+		defaultPage = !defaultPage;
+	}
 	//change detail page
 	function changeDetail(newDetail){
 		//nav change
@@ -168,23 +177,36 @@ $(function(){
 		getContainer();
 		//load page
 			
-		if(newDetail == 0){
+		if(data[currentProject].detailpage[newDetail].type == "summary"){
 			targetIn.html(
 				$("#detail-summary-temp").html().replace(/{title}/g,data[currentProject].title)
-												.replace(/{background}/,data[currentProject].detailpage[0].background)
-												.replace(/{goal}/,data[currentProject].detailpage[0].goal)
-												.replace(/{solution}/,data[currentProject].detailpage[0].solution)
-												.replace(/{imgLink}/,data[currentProject].detailpage[0].imgLink)
+												.replace(/{background}/,data[currentProject].detailpage[newDetail].background)
+												.replace(/{goal}/,data[currentProject].detailpage[newDetail].goal)
+												.replace(/{solution}/,data[currentProject].detailpage[newDetail].solution)
+												.replace(/{imgLink}/,data[currentProject].detailpage[newDetail].imgLink)
 			)
-		}else if(newDetail == 1){
+		}else if(data[currentProject].detailpage[newDetail].type == "description"){
 			targetIn.html(
 				$("#detail-description-temp").html().replace(/{title}/g,data[currentProject].title)
-												.replace(/{subtitle}/,data[currentProject].detailpage[1].subtitle)
-												.replace(/{imgLink}/,data[currentProject].detailpage[0].imgLink)
+												.replace(/{subtitle}/,data[currentProject].detailpage[newDetail].subtitle)
+												.replace(/{imgLink}/,data[currentProject].detailpage[newDetail].imgLink)
 			)
 			for(var i=0; i<data[currentProject].detailpage[1].list.length; i++){
 				targetIn.find("ul").append("<li>"+data[currentProject].detailpage[1].list[i]+"</li>");
 			}
+		}else if(data[currentProject].detailpage[newDetail].type == "video"){
+			targetIn.html(
+				$("#detail-video-temp").html().replace(/{title}/g,data[currentProject].title)
+												.replace(/{videoLink}/,data[currentProject].detailpage[newDetail].videoLink)
+			)
+		}else if(data[currentProject].detailpage[newDetail].type == "taskflow"){
+			targetIn.html(
+				$("#detail-taskflow-temp").html().replace(/{title}/g,data[currentProject].title)
+												.replace(/{taskname}/,data[currentProject].detailpage[newDetail].taskname)
+												.replace(/{description}/,data[currentProject].detailpage[newDetail].description)
+												.replace(/{imgType}/,data[currentProject].detailpage[newDetail].imgType)
+												.replace(/{imgLink}/,data[currentProject].detailpage[newDetail].imgLink)
+			)
 		}else{
 			targetIn.html(
 				$("#detail-"+data[currentProject].detailpage[newDetail].type+"-temp").html().replace(/{title}/g,data[currentProject].title)
@@ -267,6 +289,9 @@ $(function(){
 		if(newProject == 0){
 			targetIn.html($("#home-temp").html().replace(/{title}/,data[0].title));
 			currentProject = 0;
+		}else if(newProject == data.length-1){
+			targetIn.html($("#contact-temp").html().replace(/{title}/,data[0].title));
+			currentProject = data.length-1;
 		}else{
 			targetIn.html(
 				$("#list-temp").html().replace(/{title}/g,data[newProject].title)
@@ -278,7 +303,7 @@ $(function(){
 										.replace(/{imgLink}/,data[newProject].imgLink)
 			)
 		}
-		$("nav>ul>li").eq(newProject).find(".nav-point").addClass("active");
+		$("nav>ul>li").eq(newProject).find(".nav-point").eq(0).addClass("active");
 		//animate
 		animate=false;
 		targetIn.css("z-index","10");
