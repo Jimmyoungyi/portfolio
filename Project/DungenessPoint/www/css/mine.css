@@ -1,0 +1,167 @@
+.back{
+	background-color: #EF4437 !important;
+	border:none;
+	box-shadow: none;
+	font-weight: 300;
+	padding-top: 30px !important;
+}
+.active{
+	color: #EF4437 !important;
+}
+.white{
+	color:white !important;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+.deepgray{
+	color: #484645 !important;
+}
+.plash{
+	color:white;
+	background-color: #FCB64E;
+	text-align: center;
+	line-height: 1em;
+	width: 1em;
+	border-radius: 50%;
+	padding: 7px;
+	display: inline-block;
+}
+.mapcontent{
+	height: calc(100vh - 50px);
+	padding: 0;
+	margin-top: 0px;
+}
+#loading{
+	background-color: #EF4437;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+#loading img{
+	vertical-align: middle;
+	width: 40%;
+	margin: calc(50vh - 25%) 0;
+}
+.header{
+	background-color: #EF4437 !important;
+	height: 40px;
+	padding: 3px 5px;
+	border:none;
+	position: relative;
+	z-index: 10;
+	padding-top: 15px;
+}
+.header h1{
+	padding-top:1.3em !important;
+}
+.listsearch{
+	width: calc(100% - 140px);
+	display: inline-block;
+}
+.listsearch div{
+	margin-top: 2px;
+	padding: 0;
+	} 
+.listsearch input{
+	background-color: #F1F1F2;
+}
+.header .ui-btn{
+	background-color: #FCB64E;
+	border:none;
+	color:#FFFFFF;
+	letter-spacing: 0.5px;
+	font-size: 13px;
+	font-weight: 300;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.searchitem a{
+	background-color: #FAF5EC !important;
+}
+.searchimg{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: #BCBCBC;
+	float: left;
+}
+.searchlocation{
+	width:calc(80% - 120px);
+	float: left;
+	box-sizing:border-box;
+	padding: 0 30px;
+}
+.searchdistance{
+	width: 19%;
+	float: right;
+	text-align: right;
+}
+.searchbefroe{
+	width:19%;
+	float: right;
+	text-align: right;
+}
+.mainnav{
+	background-color: #FFFFFF;
+	color: #808284;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+.mainnav ul{
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+.mainnav li{
+	float: left;
+	list-style: none;
+	width: 15%;
+	margin:0 5%;
+	text-align: center;
+}
+.mainnav a{
+	text-decoration: none;
+}
+.mainnav img{
+	width: 50%;
+}
+.mainnav span{
+	color: #808284;
+}
+.main{
+	padding: 0;
+}
+.location{
+	background-color: #FCB64E;
+	overflow: hidden;
+	font-size: 16px;
+	font-weight: 300;
+}
+.location img{
+	float: left;
+	width: 10%;
+}
+.location div{
+	float: left;
+	width: 80%;
+	padding-left: 10%;
+}
+.detailmap{
+	height: 300px;
+	background-color: gray;
+}
+.detailtext{
+	padding: 20px;
+}
+
+h4{
+	color:#EF4437;
+}
+h1{
+	font-size: 1.5em;
+}
+.ui-content {
+  margin-bottom: 110px;
+}
+

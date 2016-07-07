@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+	<title>jQuery Mobile Demos</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="_assets/css/jqm-demos.css">
+	<link rel="stylesheet" href="css/mine.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<script src="js/jquery.js"></script>
+	<script src="_assets/js/index.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCa5LZdxxB9yEGcFBLspCEYYy3UY6SUjKE"></script> 
+	
+	<script src="js/reportmap.js"></script>
+	<script src="js/data.js"></script>
+	<script src="js/trackmap.js"></script>
+	<script src="js/detailmap.js"></script>
+	<script src="js/historymap.js"></script>
+	<script src="js/historydetailmap.js"></script>
+</head>
+<body>
+	<!-- Start page: #loading -->
+	<div data-role="page" id="loading">
+		<img src="img/logo.png" alt="this is logo">
+	</div><!-- /page loading -->
+
+
+
+	<!-- Start page: #searchlist -->
+	<div data-role="page" id="track">
+		<div class="header" data-role="header" href="#detail">
+			<div>
+				<button class="ui-btn ui-corner-all">Sort by</button>
+				<form class="ui-filterable listsearch">
+					<input id="filterBasic-input" data-type="search">
+				</form>
+				<a href="#trackmap" class="ui-btn ui-corner-all">Map</a>
+			</div>
+		</div><!-- /header -->
+		<div role="main" class="ui-content">
+			<ul data-role="listview" data-filter="true" data-input="#filterBasic-input" id="tracklistcontent">
+			</ul>
+		</div><!-- /content --> 
+		<div class="mainnav" data-role="footer" data-theme="a">
+			<h4><ul>
+				<li><a href="#track">
+					<img src="img/track_r.png" alt="">
+					<br>
+					<span class="active">Track</span>
+				</a></li>
+				<li><a href="#history">
+					<img src="img/history_g.png" alt="">
+					<br>
+					<span>History</span>
+				</a></li>
+				<li><a href="#report">
+					<img src="img/report_g.png" alt="">
+					<br>
+					<span>Report</span>
+				</a></li>
+				<li><a href="">
+					<img src="img/about_g.png" alt="">
+					<br>
+					<span>About</span>
+				</a></li>
+			</ul></h4>
+		</div><!-- /footer -->
+	</div><!-- /page searchlist -->
+
+
+
+	<!-- Start page: #searchmap -->
+	<div data-role="page" id="trackmap">
+		<div class="header" data-role="header" href="#detail">
+			<div>
+				<button class="ui-btn ui-corner-all">Sort by</button>
+				<form class="ui-filterable listsearch">
+					<input data-type="search">
+				</form>
+				<a href="#track" class="ui-btn ui-corner-all">List</a>
+			</div>
+		</div><!-- /header -->
+		<div role="main" class="ui-content mapcontent" id="trackmapcontent">
+
+		</div><!-- /content -->
+		<div class="mainnav" data-role="footer" data-theme="a">
+			<h4><ul>
+				<li><a href="#track">
+					<img src="img/track_r.png" alt="">
+					<br>
+					<span class="active">Track</span>
+				</a></li>
+				<li><a href="#history">
+					<img src="img/history_g.png" alt="">
+					<br>
+					<span>History</span>
+				</a></li>
+				<li><a href="#report">
+					<img src="img/report_g.png" alt="">
+					<br>
+					<span>Report</span>
+				</a></li>
+				<li><a href="">
+					<img src="img/about_g.png" alt="">
+					<br>
+					<span>About</span>
+				</a></li>
+			</ul></h4>
+		</div><!-- /footer -->
+	</div><!-- /page searchmap -->
+
+
+
+	<!-- Start page: #detail -->
+	<div data-role="page" id="detail">
+		<div class="header" data-role="header" data-theme="b">
+			<a class="back" href="#track">back</a>
+			<h1>DUNGENESS POINT</h1>
+		</div><!-- /header -->
+		<div class="main" role="main" class="ui-content">
+			<div class="location">
+				<img src="img/location_w.png" alt="">
+				<div>
+					<p class="white">Location</p>
+					<p class="white" id="detailtitle">5000 Elm Street Franklin, TN 37064</p>
+					<p class="darkgray">0.03mi</p>
+					<p class="darkgray">1 hour ago</p>
+				</div>
+			</div>
+			<div class="detailmap" id="detailmapcontent">
+			</div>
+			<div class="detailtext">
+				<h4>Amount of dungeness</h4>
+				<span id="detailmany"></span>
+				<hr>
+				<h4>Advise to come</h4>
+				<span id="detailadvise"></span>
+				<hr>
+				<h4>Notes</h4>
+				<span id="detailnotes"></span>
+			</div>
+		</div><!-- /content -->
+		<div class="mainnav" data-role="footer" data-theme="a">
+			<h4><ul>
+				<li><a href="#track">
+					<img src="img/track_r.png" alt="">
+					<br>
+					<span class="active">Track</span>
+				</a></li>
+				<li><a href="#history">
+					<img src="img/history_g.png" alt="">
+					<br>
+					<span>History</span>
+				</a></li>
+				<li><a href="#report">
+					<img src="img/report_g.png" alt="">
+					<br>
+					<span>Report</span>
+				</a></li>
+				<li><a href="">
+					<img src="img/about_g.png" alt="">
+					<br>
+					<span>About</span>
+				</a></li>
+			</ul></h4>
+		</div><!-- /footer -->
+	</div><!-- /page detail -->
+
+
+
+	<!-- Start page: #history -->
+	<div data-role="page" id="history">
+		<div class="header" data-role="header" href="#historydetail">
+			<div>
+				<button class="ui-btn ui-corner-all">Sort by</button>
+				<form class="ui-filterable listsearch">
+					<input id="filterBasichistory-input" data-type="search">
+				</form>
+				<a href="#historymap" class="ui-btn ui-corner-all">Map</a>
+			</div>
+		</div><!-- /header -->
+		<div role="main" class="ui-content">
+			<ul data-role="listview" data-filter="true" data-input="#filterBasichistory-input" id="historylistcontent">
+			</ul>
+		</div><!-- /content --> 
+		<div class="mainnav" data-role="footer" data-theme="a">
+			<h4><ul>
+				<li><a href="#track">
+					<img src="img/track_g.png" alt="">
+					<br>
+					<span>Track</span>
+				</a></li>
+				<li><a href="#history">
+					<img src="img/history_r.png" alt="">
+					<br>
+					<span class="active">History</span>
+				</a></li>
+				<li><a href="#report">
+					<img src="img/report_g.png" alt="">
+					<br>
+					<span>Report</span>
+				</a></li>
+				<li><a href="">
+					<img src="img/about_g.png" alt="">
+					<br>
+					<span>About</span>
+				</a></li>
+			</ul></h4>
+		</div><!-- /footer -->
+	</div><!-- /page history -->
+
+
+	<!-- Start page: #historydetail -->
+	<div data-role="page" id="historydetail">
+		<div class="header" data-role="header" data-theme="b">
+			<a class="back" href="#history">back</a>
+			<h1>DUNGENESS POINT</h1>
+		</div><!-- /header -->
+		<div class="main" role="main" class="ui-content">
+			<div class="location">
+				<img src="img/location_w.png" alt="">
+				<div>
+					<p class="white">Location</p>
+					<p class="white" id="historytitle">5000 Elm Street Franklin, TN 37064</p>
+					<p class="darkgray">0.03mi</p>
+					<p class="darkgray">1 hour ago</p>
+				</div>
+			</div>
+			<div class="detailmap" id="historydetailmapcontent">
+			</div>
+			<div class="detailtext">
+				<h4>Amount of dungeness</h4>
+				<span id="historymany"></span>
+				<hr>
+				<h4>Advise to come</h4>
+				<span id="historyadvise"></span>
+				<hr>
+				<h4>Notes</h4>
+				<span id="historynotes"></span>
+			</div>
+		</div><!-- /content -->
+		<div class="mainnav" data-role="footer" data-theme="a">
+			<h4><ul>
+				<li><a href="#track">
+					<img src="img/track_g.png" alt="">
+					<br>
+					<span>Track</span>
+				</a></li>
+				<li><a href="#history">
+					<img src="img/history_r.png" alt="">
+					<br>
+					<span class="active">History</span>
+				</a></li>
+				<li><a href="#report">
+					<img src="img/report_g.png" alt="">
+					<br>
+					<span>Report</span>
+				</a></li>
+				<li><a href="">
+					<img src="img/about_g.png" alt="">
+					<br>
+					<span>About</span>
+				</a></li>
+			</ul></h4>
+		</div><!-- /footer -->
+	</div><!-- /page detail -->
+
+
+	<!-- Start page: #historymap -->
+	<div data-role="page" id="historymap">
+		<div class="header" data-role="header" href="#detail">
+			<div>
+				<button class="ui-btn ui-corner-all">Sort by</button>
+				<form class="ui-filterable listsearch">
+					<input data-type="search">
+				</form>
+				<a href="#history" class="ui-btn ui-corner-all">List</a>
+			</div>
+		</div><!-- /header -->
+		<div role="main" class="ui-content mapcontent" id="historymapcontent">
+
+		</div><!-- /content -->
+		<div class="mainnav" data-role="footer" data-theme="a">
+			<h4><ul>
+				<li><a href="#track">
+					<img src="img/track_g.png" alt="">
+					<br>
+					<span>Track</span>
+				</a></li>
+				<li><a href="#history">
+					<img src="img/history_r.png" alt="">
+					<br>
+					<span class="active">History</span>
+				</a></li>
+				<li><a href="#report">
+					<img src="img/report_g.png" alt="">
+					<br>
+					<span>Report</span>
+				</a></li>
+				<li><a href="">
+					<img src="img/about_g.png" alt="">
+					<br>
+					<span>About</span>
+				</a></li>
+			</ul></h4>
+		</div><!-- /footer -->
+	</div><!-- /page historymap -->
+
+
+
+	<!-- Start page: #report -->
+	<div data-role="page" id="report">
+		<div class="header" data-role="header" data-theme="b">
+			<a class="back" href="#track">BACK</a>
+			<h1>Report Observation</h1>
+			<a class="back" id="reportformsubmitbtn" href="">SUBMIT</a>
+		</div><!-- /header -->
+		<div role="main" class="ui-content">
+			<form name="reportform" action="db/sent.php" method="post" enctype="multipart/form-data">
+				<h4>location</h4>
+				<div id="reportlocationcontent">
+				</div>
+				<hr>
+				<h4>Amount of dungeness</h4>
+				<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" id="amount">
+					<input type="radio" name="many" id="radio-choice-c" value="Not much" checked="checked">
+					<label for="radio-choice-c">Not much</label>
+					<input type="radio" name="many" id="radio-choice-d" value="Some">
+					<label for="radio-choice-d">Some</label>
+					<input type="radio" name="many" id="radio-choice-e" value="A lot">
+					<label for="radio-choice-e">A lot</label>
+				</fieldset>
+				<hr>
+				<h4>Recommend of coming</h4>
+				<select name="advise" id="slider-flip-m" data-role="slider" data-mini="true" id="recommend">
+				    <option value="No">No</option>
+				    <option value="Yes" selected="">Yes</option>
+				</select>
+				<hr>
+				<h4>Notes</h4>
+				<textarea name="notes" id="notes" cols="30" rows="10"></textarea>
+				<hr>
+				<h4>photo</h4>
+				<div class="plash">+</div>
+				<span onclick="addphoto()">add photo</span>
+				<img id="myImage" width="100%">
+				<input type="file" name="img" accept="image/*" id="img">
+				<!-- jimmy -->
+			</form>
+		</div><!-- /content -->
+		<div class="mainnav" data-role="footer" data-theme="a">
+			<h4><ul>
+				<li><a href="#track">
+					<img src="img/track_g.png" alt="">
+					<br>
+					<span>Track</span>
+				</a></li>
+				<li><a href="#history">
+					<img src="img/history_g.png" alt="">
+					<br>
+					<span>History</span>
+				</a></li>
+				<li><a href="#report">
+					<img src="img/report_r.png" alt="">
+					<br>
+					<span class="active">Report</span>
+				</a></li>
+				<li><a href="">
+					<img src="img/about_g.png" alt="">
+					<br>
+					<span>About</span>
+				</a></li>
+			</ul></h4>
+		</div><!-- /footer -->
+	</div><!-- /page report -->
+
+
+	<!-- Start page: #reportmap -->
+	<div data-role="page" id="reportmap">
+
+		<div class="header" data-role="header" data-theme="b">
+			<a class="back" href="#report">BACK</a>
+			<h1>Report Observation</h1>
+			<a class="back" id="reportmapsubmitbtn" href="">SUBMIT</a>
+		</div><!-- /header -->
+		<div role="main" class="ui-content mapcontent" id="reportmapcontent">
+
+		</div><!-- /content -->
+		<div class="mainnav" data-role="footer" data-theme="a">
+			<h4><ul>
+				<li><a href="#track">
+					<img src="img/track_g.png" alt="">
+					<br>
+					<span>Track</span>
+				</a></li>
+				<li><a href="#history">
+					<img src="img/history_g.png" alt="">
+					<br>
+					<span>History</span>
+				</a></li>
+				<li><a href="#report">
+					<img src="img/report_r.png" alt="">
+					<br>
+					<span class="active">Report</span>
+				</a></li>
+				<li><a href="">
+					<img src="img/about_g.png" alt="">
+					<br>
+					<span>About</span>
+				</a></li>
+			</ul></h4>
+		</div><!-- /footer -->
+	</div><!-- /page Reportmap -->
+	<script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+	<script>
+		$("#loading").on("pageshow",function(){
+			setTimeout(function () {document.location="index.html#track"}, 1500);
+		})
+		//track page javascript
+		var db;
+		$("#track").on("pageshow",function(){
+			var back=$.ajax({
+				url:"http://jimmyoungyi.com/aau/wnm617/mid/db/db.php",
+				dataType:"json"
+			});
+			function callback(){
+				$.when(back)
+				.done(function(d){
+					console.log("good",d);
+					db=d;
+					addcontent();
+				})
+				.fail(function(d){
+					console.log("bad",d);
+				})
+				.always(function(d){
+					console.log("who knows",d);
+				})
+			};
+			callback();
+			var dblength=0;
+			function addcontent(){
+				var content="";
+				for( a in db){
+				    dblength++;
+				}
+				for(var i=0;i<dblength;i++){
+					content+='<li class="searchitem"><a href="" class="ui-btn ui-shadow ui-corner-all"  data-transition="slide"><div class="searchimg"></div><p class="searchlocation">'+db[i].title+'</p><p class="searchdistance">0.03mi</p><p class="searchbefroe">1 hour ago</p></a></li>';
+				}
+				$("#tracklistcontent").html(content);
+				$(".searchitem").click(function(){
+					var thisid=$(this).index();
+					localStorage.trackdetailtitle=db[thisid].title;
+					localStorage.trackdetaillat=db[thisid].lat;
+					localStorage.trackdetaillng=db[thisid].lng;
+					localStorage.trackdetailmany=db[thisid].many;
+					localStorage.trackdetailadvise=db[thisid].advise;
+					localStorage.trackdetailnotes=db[thisid].notes;
+					document.location="index.html#detail";
+				})
+			}
+			function distance(){
+			}
+		})
+
+		//track map page javascript
+		$("#trackmap").on("pageshow",function(){
+			trackmapinitialize();
+			addpoint()
+		});
+
+		//detail page javascript
+		$("#detail").on("pageshow",function(){
+			detailmapinitialize();
+			$("#detailtitle").html(localStorage.trackdetailtitle);
+			$("#detailmany").html(localStorage.trackdetailmany);
+			$("#detailadvise").html(localStorage.trackdetailadvise);
+			$("#detailnotes").html(localStorage.trackdetailnotes);
+		});
+
+		//history list page javascript
+		var title;
+		var lat;
+		var lng;
+		var many;
+		var advise;
+		var notes;
+		$("#history").on("pageshow",function(){
+			if(localStorage.localtitle){
+				title=localStorage.localtitle.split(',');
+			}else{
+				title=[];
+				localStorage.localtitle=[]
+			}
+			if(localStorage.locallat){
+				lat=localStorage.locallat.split(',');
+			}else{
+				lat=[];
+				localStorage.locallat=[]
+			}
+			if(localStorage.locallng){
+				lng=localStorage.locallng.split(',');
+			}else{
+				lng=[];
+				localStorage.locallng=[]
+			}
+			if(localStorage.localmany){
+				many=localStorage.localmany.split(',');
+			}else{
+				many=[];
+				localStorage.localmany=[]
+			}
+			if(localStorage.localadvise){
+				advise=localStorage.localadvise.split(',');
+			}else{
+				advise=[];
+				localStorage.localadvise=[]
+			}
+			if(localStorage.localnotes){
+				notes=localStorage.localnotes.split(',');
+			}else{
+				notes=[];
+				localStorage.localnotes=[]
+			}
+			var content="";
+			for(var i=0;i<title.length;i++){
+				content='<li class="searchitem historyitem"><a href="" class="ui-btn ui-shadow ui-corner-all"  data-transition="slide"><div class="searchimg"></div><p class="searchlocation">'+title[i]+'</p><p class="searchdistance">0.03mi</p><p class="searchbefroe">1 hour ago</p></a></li>'+content;
+			}
+			$("#historylistcontent").html(content);
+			$(".historyitem").click(function(){
+				var thisid=title.length-1-$(this).index();
+				localStorage.trackhistorytitle=title[thisid];
+				localStorage.trackhistorylat=lat[thisid];
+				localStorage.trackhistorylng=lng[thisid];
+				localStorage.trackhistorymany=many[thisid];
+				localStorage.trackhistoryadvise=advise[thisid];
+				localStorage.trackhistorynotes=notes[thisid];
+				document.location="index.html#historydetail";
+			})
+		})
+
+		//history map page javascript
+		$("#historymap").on("pageshow",function(){
+			historymapinitialize();
+			addhistorypoint()
+		});
+
+
+		//history detail page javascript
+		$("#historydetail").on("pageshow",function(){
+			historydetailmapinitialize();
+			$("#historytitle").html(localStorage.trackhistorytitle);
+			$("#historymany").html(localStorage.trackhistorymany);
+			$("#historyadvise").html(localStorage.trackhistoryadvise);
+			$("#historynotes").html(localStorage.trackhistorynotes);
+		});
+
+		//report page javascript
+		function addphoto(){
+			document.addEventListener("deviceready", onDeviceReady, false);
+			function onDeviceReady() {
+			    console.log(navigator.camera);
+			}
+			navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+			    destinationType: Camera.DestinationType.DATA_URL
+			});
+
+			function onSuccess(imageData) {
+			    var image = document.getElementById('myImage');
+			    image.src = "data:image/jpeg;base64," + imageData;
+			    $("#img").val(image.src)
+			    alert(img.src);
+			}
+
+			function onFail(message) {
+			    alert('Failed because: ' + message);
+			}
+			
+		}
+		$("#report").on("pageshow",function(){
+			if(localStorage.content){
+				$("#reportlocationcontent").html('<a href="#reportmap"><span>'+localStorage.content+'</span></a>'+'<input type="hidden" name="title" value="'+localStorage.content+'"><input type="hidden" name="lat" value="'+localStorage.lat+'"><input type="hidden" name="lng" value="'+localStorage.lng+'">');
+			}else{
+				$("#reportlocationcontent").html('<a href="#reportmap"><div class="plash">+</div><span>add location</span></a>');
+			}
+			if(localStorage.localtitle){
+				title=localStorage.localtitle.split(',');
+			}else{
+				title=[];
+				localStorage.localtitle=[]
+			}
+			if(localStorage.locallat){
+				lat=localStorage.locallat.split(',');
+			}else{
+				lat=[];
+				localStorage.locallat=[]
+			}
+			if(localStorage.locallng){
+				lng=localStorage.locallng.split(',');
+			}else{
+				lng=[];
+				localStorage.locallng=[]
+			}
+			if(localStorage.localmany){
+				many=localStorage.localmany.split(',');
+			}else{
+				many=[];
+				localStorage.localmany=[]
+			}
+			if(localStorage.localadvise){
+				advise=localStorage.localadvise.split(',');
+			}else{
+				advise=[];
+				localStorage.localadvise=[]
+			}
+			if(localStorage.localnotes){
+				notes=localStorage.localnotes.split(',');
+			}else{
+				notes=[];
+				localStorage.localnotes=[]
+			}
+		})
+		
+		$("body").on("click","#reportformsubmitbtn",function(e){
+			e.preventDefault();
+
+			console.log(title);
+			title.push($("[name='title']").val());
+			console.log(title);
+			localStorage.localtitle = title;
+			lat.push($("[name='lat']").val());
+			localStorage.locallat = lat;
+			lng.push($("[name='lng']").val());
+			localStorage.locallng = lng;
+			many.push($(".ui-radio-on").html());
+			localStorage.localmany = many;
+			advise.push($("[name='advise']").val());
+			localStorage.localadvise = advise;
+			notes.push($("#notes").val());
+			localStorage.localnotes = notes;
+			localStorage.removeItem("content");
+			localStorage.removeItem("lat");
+			localStorage.removeItem("lng");
+			// document.reportform.submit();
+//jimmy
+			$.ajax({
+				url:'http://jimmyoungyi.com/aau/wnm617/mid/db/sent.php',
+				type:'POST',
+				data: $(document.reportform).serializeArray()
+			});
+            document.location="index.html#history";
+		});
+
+		//document.onload = function(){}
+
+		// report map page javascript
+		$("#reportmap").on("pageshow",function(){
+			initialize();
+			$("#reportmapsubmitbtn").on('click',function(){
+	       		localStorage.setItem("content",titlecontent.replace(",","").replace(",","").replace(",","").replace(",","").replace(",",""));
+	        	localStorage.setItem("lat",latg);
+	       		localStorage.setItem("lng",lngg);
+	       		document.location="index.html#report";
+      		});
+		});
+		function getlocalarray(){
+			if(localStorage.localtitle){
+				title=localStorage.localtitle.split(',');
+			}else{
+				title=[];
+				localStorage.localtitle=[]
+			}
+			if(localStorage.locallat){
+				lat=localStorage.locallat.split(',');
+			}else{
+				lat=[];
+				localStorage.locallat=[]
+			}
+			if(localStorage.locallng){
+				lng=localStorage.locallng.split(',');
+			}else{
+				lng=[];
+				localStorage.locallng=[]
+			}
+			if(localStorage.localmany){
+				many=localStorage.localmany.split(',');
+			}else{
+				many=[];
+				localStorage.localmany=[]
+			}
+			if(localStorage.localadvise){
+				advise=localStorage.localadvise.split(',');
+			}else{
+				advise=[];
+				localStorage.localadvise=[]
+			}
+			if(localStorage.localnotes){
+				notes=localStorage.localnotes.split(',');
+			}else{
+				notes=[];
+				localStorage.localnotes=[]
+			}
+		}
+	</script>
+</body>
+</html>
