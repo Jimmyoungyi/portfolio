@@ -1,0 +1,15 @@
+body {
+	margin: 0;
+	background-image: url("img/bk.png");
+	background-size: cover;
+}
+.title-text{
+	font-size: 30px;
+}
+.content-text{
+	font-size: 18px;
+	color: #444;
+}
+*{
+	box-sizing: border-box;
+}
