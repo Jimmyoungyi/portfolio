@@ -4,6 +4,16 @@
 	<meta charset="UTF-8">
 	<title>Jimmy</title>
 	<script src="js/jquery-1.11.3.js"></script>
+
+
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta name="apple-touch-fullscreen" content="yes">
+
+
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<script src="js/jquery.mousewheel.js"></script>
 	<script src="js/data.js"></script>
 	<script src="js/main.js"></script>
@@ -13,32 +23,41 @@
 <body>
 	<div id="page1" class="page"></div>
 	<div id="page2" class="page"></div>
-	<header>Jianyi Yang Portfolio</header>
-	<div class="show-list"></div>
+	<header>Contact me</header>
+	<div class="show-list">Jianyi Yang</div>
 	<nav>
 		<ul></ul>
 	</nav>
-	<footer>Contact Me</footer>
+	<footer></footer>
 
 
 	
 </body>
+<script type="text/template" id="home-temp">
+	<div class="cover">
+		<div class="name text-header"> Jianyi Yang </div>
+		<div class="text-title"> I am a front-end developer based on San Francisco. </div>
+		<div class="text-title"> I am looking for a internship in San Francisco or bay area. </div>
+		<div class="text-title"> Feel free to contect me </div>
+		<span class="See portfolio"> My Porject </span>
+	</div>
+	
+</script>
 <script type="text/template" id="nav-item">
 	<li>
 		<div class="nav-point"></div>
 		<div class="hover-name text-nav">{title}</div>
 	</li>
 </script>
-<script type="text/template" id="home-temp">
-	<span class="home">Jianyi Yang Portfolio</span>
-	<span style="text-align:center;display:none">(on progress)</span>
-	<ul class="home-list list">
+<script type="text/template" id="project-temp">
+	<ul class="project-list list">
 
 	</ul>
-	<span style="text-align:center;display:block;display:none">Contact Me</span>
+	<span style="text-align:center;display:block;display:none"></span>
 </script>
-<script type="text/template" id="home-item">
+<script type="text/template" id="project-item">
 	<li>
+		<img src="{imgLink}" alt="">
 		<span class="text-title">{title}</span>
 		<hr>
 		<span class="text-title">{plantform}</span>
@@ -118,6 +137,10 @@
 	</div>
 </script>
 <script type="text/template" id="detail-sitemap-temp">
+	<div class="mobile-img">
+		<span></span>
+		<img src="img/Project_detail_sitemap_empty.png" alt="">
+	</div>
 	<div class="header">
 		<span class="title text-header">{title}</span>
 		<span class="text-title">Sitemap</span>
@@ -130,8 +153,12 @@
 	</div><div class="detail-img sitemap-description">
 		<img src="img/Project_detail_sitemap_empty.png" alt="">
 	</div>
+	<div class="click-to-show">click to show page</div>
 </script>
 <script type="text/template" id="detail-taskflow-temp">
+	<div class="mobile-img">
+		<img src="img/Project_detail_sitemap_empty.png" alt="">
+	</div>
 	<div class="header">
 		<span class="title text-header">{title}</span>
 		<span class="text-title">Taskflow</span>
@@ -143,5 +170,6 @@
 	</div><div class="detail-img">
 		<img class="{imgType}" src="{imgLink}" alt="">
 	</div>
+	<div class="click-to-show">click to show page</div>
 </script>
 </html>

@@ -1,0 +1,93 @@
+*{
+	box-sizing: border-box;
+}
+h1{
+	margin: 16px 0;
+}
+ul{
+	padding: 0;
+	margin: 0;
+}
+li{
+	list-style: none;
+}
+.info{
+	font-size: 12px;
+}
+.tp{
+	cursor: pointer;
+}
+body{
+	padding: 0;
+	margin: 0;
+	background-color: black;
+	color: white;
+	font-size: 14px;
+	header{
+		border-bottom: 1px solid lightgray;
+		padding-left: 5vw;
+		span{
+			vertical-align: bottom;
+			font-size: 20px;
+			line-height: 28px;
+			margin-left: 20px;
+		}
+	}
+	.container{
+		padding: 0 5vw;
+		height: calc(100vh - 70px);
+		.occupation{
+			height: 100%;
+			width: 60%;
+			float: left;
+		}
+		.data{
+			height: 100%;
+			width: 40%;
+			float: left;
+			.days{
+				overflow: hidden;
+				text-align: center;
+				line-height: calc((100vh - 70px)/25);
+				margin: calc((100vh - 70px)/12.5) 0;
+				div{
+					cursor: pointer;
+					float: left;
+					width: 14.2857%;
+				}
+				.selected{
+					background-color: gray;
+					color: black;
+				}
+			}
+			.display{
+				padding: 0 2vw;
+				height: 60%;
+				padding-bottom: 8vh;
+				.content{
+					overflow: hidden;
+					height: 100%;
+					border: 1px solid white;
+					border-top-left-radius: 25px;
+					border-bottom-left-radius: 25px;
+					ul{
+						width: 100px;
+						float: left;
+						height: 100%;
+						text-align: center;
+						li{
+							cursor: pointer;
+						}
+					}
+					.displaySVG{
+						overflow-x: hidden;
+						overflow-y: scroll;
+						width: calc( 100% - 100px);
+						float: left;
+						height: 100%;
+					}
+				}
+			}
+		}
+	}
+}
